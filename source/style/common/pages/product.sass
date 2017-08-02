@@ -1,0 +1,202 @@
+/************************************************
+ *Стили для страницы продукта
+ ************************************************
+.product__wrap
+  background-color: $white
+  padding: 35px 35px 35px
+  border-radius: 25px 25px 25px 0
+  &.product__wrap-item
+    padding-top: 23px
+  h2
+    font-size: rem(30px)
+    color: $black
+    margin-bottom: 25px
+    font-family: "Roboto Condensed"
+    letter-spacing: 0.5px
+  .enter__by
+    color: $black
+  .feedback__list
+    position: relative
+    margin-bottom: 25px
+    padding-bottom: 25px
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      width: 60%
+      height: 1px
+      bottom: 5px
+      left: 50%
+      transform: translateX(-50%)
+      background: #000000
+      box-shadow: inset -53px 10px 54px -7px white, inset 53px 10px 54px -7px white
+  .feedback__form
+    position: relative
+    margin-bottom: 25px
+    padding-bottom: 25px
+    padding-right: 230px
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      width: 60%
+      height: 1px
+      background-color: $black
+      bottom: -10px
+      left: 50%
+      transform: translateX(-50%)
+      background: #000000
+      box-shadow: inset -53px 10px 54px -7px white, inset 53px 10px 54px -7px white
+    .last__row-left
+      width: 63%
+    label
+      color: $black
+      font-weight: 600
+      &.subscribe-label
+        font-weight: 400
+    .feedback__input-item
+      width: 48%
+      +tablets
+        width: 100%
+  +tablets
+    border-radius: 0
+
+.product__top
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-bottom: 25px
+
+.product__left
+  width: 50%
+  h2
+    display: none
+    +tablets
+      display: block
+  img
+    width: 90%
+  +laptops
+    width: 40%
+
+  +tablets
+    width: 100%
+
+.product__right
+  width: 50%
+  +laptops
+    width: 60%
+
+  +tablets
+    h2
+      display: none
+
+  +tablets
+    width: 100%
+
+  h2
+    font-size: rem(40px)
+
+.product__author
+  font-size: rem(15px)
+  margin-bottom: 25px
+  span
+    +Ubuntu(medium)
+    margin-left: 5px
+
+.comments__wrap
+  display: flex
+  align-items: center
+  margin-bottom: 25px
+  .shop__training-comments
+    +Ubuntu(medium)
+    margin-right: 30px
+    margin-top: -2px
+
+.product__descr
+  font-size: rem(15px)
+  margin-bottom: 25px
+
+.product__info
+  display: flex
+  margin-bottom: 25px
+  .shop__training-comments
+    +Ubuntu(medium)
+    img
+      margin-right: 5px
+    &:first-child
+      margin-right: 30px
+
+.product__title
+  font-size: rem(25px)
+  text-transform: uppercase
+  margin-bottom: 25px
+  font-family: "Roboto Condensed"
+
+.format__item
+  display: flex
+  justify-content: space-between
+  margin-bottom: 25px
+  h5
+    font-size: rem(15px)
+    margin: 0
+    margin-bottom: 15px
+  +phones
+    flex-direction: column
+    margin-bottom: 25px
+
+.format__left,
+.format__right
+  width: 50%
+  +phones
+    width: 100%
+
+.available__versions
+  +Ubuntu(light)
+  font-size: rem(15px)
+  span
+    display: block
+
+.format__right
+  margin-top: -2px
+  a
+    width: 100%
+    &.grey
+      background-color: #B5B5B5
+      border-color: #B5B5B5
+  +phones
+    margin-top: 15px
+
+.econom__price
+  margin-bottom: 10px
+
+.about__book-descr
+  width: 70%
+  font-size: rem(15px)
+  margin-bottom: 50px
+  +laptops
+    width: 100%
+
+.feedback__item
+  display: flex
+  margin-bottom: 30px
+  h4
+    color: $black
+  +tablets
+    flex-direction: column
+
+.feedback__left
+  width: 30%
+  +tablets
+    width: 100%
+    margin-bottom: 15px
+
+.feedback__right
+  +Ubuntu(light)
+  width: 70%
+  font-size: rem(15px)
+  +tablets
+    width: 100%
+
+.author__info
+  +Ubuntu(light)
+  font-size: rem(13px)

@@ -1,0 +1,91 @@
+// MODALS
+.modal-full
+  width: 100%
+  padding: 0
+  .cartonbox-flex
+    padding: 0
+  .cartonbox-container
+    padding: 0
+    overflow: hidden
+    min-height: 100vh
+  h2
+    font-family: 'Roboto Condensed', sans-serif
+    font-size: 42px
+    text-transform: uppercase
+    margin-bottom: 20px
+  p
+    font-size: 13px
+
+.modal-boxed
+  max-width: 700px
+  width: 100%
+  padding: 0
+  & + .cartonbox-close
+    display: none !important
+  .cartonbox-flex
+    padding: 0
+  .cartonbox-container
+    padding: 0
+    background: transparent
+  .modal-btn-holder
+    .btn
+      left: 30px
+      bottom: 20px
+
+
+.cartonbox-close, .modal-close
+  background: url('../img/icons/modal-close.svg') no-repeat center
+  background-size: cover
+  width: 40px
+  height: 40px
+  top: 50px
+  right: 50px
+  transition: all $transitionSpeed $ease
+  svg
+    display: none
+  &:hover
+    opacity: .7
+
+
+.modal
+  &-row
+    display: flex
+    align-items: center
+    overflow: hidden
+  &-box
+    position: relative
+    form
+      max-width: 304px
+      margin-top: 15px
+    p
+      font-size: 13px
+  &-image
+    position: absolute
+    top: -50px
+    right: 0
+    z-index: 1
+  &-btn-holder
+    position: relative
+    .btn
+      position: absolute
+      left: 60px
+      z-index: 3
+      bottom: 35px
+  &-holder
+    display: flex
+    flex-direction: column
+    min-height: 550px
+    position: relative
+    z-index: 2
+    h2
+      margin-top: auto
+    form
+      margin-bottom: auto
+  img
+    max-width: 100%
+
+  &-close
+    position: absolute
+    top: 15px
+    right: 35px
+    cursor: pointer

@@ -1,0 +1,838 @@
+.wrapper
+  min-width: 1450px
+  background: linear-gradient(90deg, $bg-1, $bg-2)
+  +desktops
+    min-width: 100%
+
+.bg__pic
+  width: 100%
+  height: 100%
+  background: url("../img/bg.png") center 0 no-repeat
+  background-size: 1995px
+  z-index: 100
+  transition: transform $transitionSpeed $ease
+  &.active
+    transform: translate3d(0, -38px, 0)
+    .banner__wrap
+      top: 38px
+  &--no-line
+    background-image: url('../img/man-bg.png')
+    +laptops
+      background: url("../img/main/man2.png") left 200px no-repeat
+      background-size: 992px
+    +tablets
+      background: url("../img/main/man2.png") left 200px no-repeat
+
+  &__mobile
+    display: none
+    position: absolute
+    left: 0
+    bottom: 95px
+  +laptops
+    position: relative
+    background: url("../img/main/man2.png") left 200px no-repeat
+    // background-position: center 150px;
+    background-size: 992px
+
+  +tablets
+    background: none
+    .bg__pic__mobile
+      display: block
+    &.active
+      transform: translate3d(0, 0px, 0)
+    &:before
+      position: absolute
+      top: 120px
+      left: 0
+      right: 0
+      content: ""
+      display: block
+      width: 100%
+      height: 2px
+      background: url("../img/main/shopSeparator.png") no-repeat center
+      background-size: contain
+
+  +phones
+    background-position: -80px 80px
+
+  +phones-s
+    background-position: -100px 80px
+
+.banner__wrap
+  position: absolute
+  left: -9999px
+  top: 0
+  padding-left: 10px
+  padding-top: 25px
+  opacity: 0
+  transition: all $transitionSpeed $ease
+  +desktops
+    display: none
+
+  &.active
+    opacity: 1
+    left: 100%
+
+.banner__item
+  margin-bottom: 100px
+
+.main__container
+  position: relative
+  +box-shadow(0px 0px 50px 3px $black)
+
+.header
+  padding: 8px 5px
+  background-color: $black
+  transform: translate3d(0, -100%, 0)
+  transition: transform $transitionSpeed $ease
+  +tablets
+    display: none
+
+  &__top
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
+  &.active
+    transform: translate3d(0, 0, 0)
+    +tablets
+      display: none
+  &__right
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.points__list
+  position: relative
+  display: flex
+  margin-left: 23px
+
+.points__item
+  flex: 0 0 auto
+  +Ubuntu(light)
+  position: relative
+  padding-right: 15px
+  transition: color $transitionSpeed $ease
+  &:hover
+    color: $orange
+  a
+    font-size: rem(16px)
+  &:after
+    content: "/"
+    position: absolute
+    top: 50%
+    right: 5px
+    color: $text-grey
+    transform: translateY(-50%)
+  &.active
+    max-width: 450px
+    overflow: hidden
+    a
+      white-space: nowrap
+      overflow: hidden
+      display: inline-block
+      +Ubuntu(bold)
+    &:after
+      display: none
+
+.registration
+  margin-left: 64px
+  color: $text-red
+  transition: all $transitionSpeed $ease
+  background: black
+  font-weight: 500
+  &:hover
+    color: $orange
+  &:before
+    display: block
+    position: absolute
+    top: 0
+    content: ' '
+    width: 50px
+    height: 20px
+    left: 0px
+    left: 30px
+    background: linear-gradient(to right, rgba(black, 0), rgba(black, 0.99))
+
+.close__link
+  transition: all $transitionSpeed $ease
+  margin-right: 34px
+  font-size: 13px
+  display: flex
+  align-items: center
+  +desktops
+    margin-right: 10px
+
+  .ico
+    height: 10px
+    margin-top: -20px
+    display: inline-block
+    margin-right: 5px
+    border: none
+    font-size: 22px
+    font-weight: 100
+  span
+    border-bottom: 1px dotted $grey
+    transition: all $transitionSpeed $ease
+  &:hover
+    color: $grey
+    text-decoration: none
+    span
+      border-color: transparent
+
+/********************************************************
+ *Стили для основной верхней части
+ *********************************************************
+
+.main__info-middle
+  .container
+    display: flex
+    justify-content: space-between
+    padding-right: 50px
+    +laptops
+      padding: 0 30px
+
+    +phones
+      padding: 0 15px
+
+.info__middle-left
+  width: 45%
+  +laptops
+    width: 0
+
+.info__middle-right
+  width: 55%
+  +laptops
+    width: 100%
+    margin: 0 20px
+
+  +phones-s
+    margin: 0 10px
+
+.info__top-list
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 7px
+  padding-right: 30px
+  color: white
+  padding-left: 0
+  +tablets
+    display: none
+
+.info__top-item
+  +Ubuntu(light)
+  display: flex
+  align-items: center
+  font-size: rem(15px)
+  transition: all $transitionSpeed $ease
+  a:not(.non-hoverable)
+    line-height: 1.2
+    +hover($white, none)
+    margin-left: 5px
+    &:focus
+      color: white
+  .email
+    text-decoration: underline
+    font-weight: 400 !important
+
+.title
+  +tablets
+    width: 70%
+    padding-top: 15px
+
+  h1
+    font-size: rem(81px)
+    text-align: center
+    color: $white
+    letter-spacing: 0px
+    text-transform: uppercase
+    +laptops
+      font-size: rem(65px)
+
+    +tablets
+      font-size: rem(40px)
+      text-align: left
+      margin-bottom: 50px
+
+.mnu__for-mobile
+  display: none
+  position: absolute
+  right: 25px
+  top: 25px
+  font-size: 35px
+  padding: 0 7px
+  border: 2px solid $white
+  border-radius: 5px
+  transition: all $transitionSpeed $ease
+  +tablets
+    display: block
+
+  +tablets-from
+    display: none !important
+
+  &:hover
+    color: $white
+
+.mnu
+  padding-top: 10px
+  margin-bottom: 35px
+  +laptops
+    margin-bottom: 15px
+
+  +tablets
+    display: flex
+    flex-direction: column
+    position: fixed
+    align-items: flex-end
+    left: 15px
+    top: 0
+    width: 100%
+    min-height: 100vh
+    overflow-y: scroll
+    z-index: 1000
+    background-color: rgba($black, 0.8)
+    padding: 0 25px
+    opacity: 0
+    transform: translate3d(0, 100%, 0)
+    transition: all $transitionSpeed $ease
+    .close__btn-wrap
+      display: flex
+      width: 100%
+      .change__language
+        margin-right: auto
+    &.active
+      opacity: 1
+      transform: translate3d(0, 0, 0)
+
+.close__btn-wrap
+  display: none
+  justify-content: space-between
+  align-items: center
+  padding-top: 25px
+  margin-bottom: 40px
+
+.change__language
+  img
+    margin-right: 5px
+  a
+    text-decoration: underline
+
+.close__btn
+  position: relative
+  font-size: 35px
+  padding: 0 8px
+  border: 2px solid $white
+  border-radius: 5px
+
+.mnu__list
+  display: flex
+  margin: 0px 10px
+  justify-content: space-around
+  padding: 0 10px
+  border: 2px solid $white
+  background: rgba(white, 0.1)
+  border-radius: 10px 10px 10px 0
+  &-mobile-contacts
+    display: none
+    text-align: right
+    margin-top: auto
+    padding-top: 20px
+    padding-bottom: 5vh
+  &-mobile-item
+    margin-bottom: 10px
+    color: white
+    font-size: 15px
+    display: flex
+    width: 100%
+    align-items: center
+    justify-content: flex-end
+    .ico
+      margin-right: 8px
+      transform: scale(1.5)
+    .hoverable-link
+      margin-left: 5px
+    &:first-child
+      margin-bottom: 25px
+  +laptops
+    margin: 0 auto
+    max-width: 700px
+
+  +tablets
+    flex-direction: column
+    text-align: right
+    border: none
+    background: transparent
+    margin-right: 0
+    &-mobile-contacts
+      display: block
+
+.mnu__item
+  +Ubuntu(light)
+  padding: 10px 2px
+  line-height: 1
+  margin-top: -2px
+  margin-bottom: -2px
+  font-size: 19px
+  border-top: 2px solid transparent
+  border-bottom: 2px solid transparent
+  transition: border $transitionSpeed $ease
+  a
+    color: $white
+  &:hover, &.active
+    border-color: $orange
+    a
+      color: $orange
+      text-decoration: none
+  +tablets
+    +Ubuntu(medium)
+    font-size: 25px
+    &:hover, &.active
+      border-color: transparent
+
+.mnu__link
+  +tablets
+    display: inline-block
+    border-bottom: 1px solid transparent
+
+.adaptive__row
+  +laptops
+    display: flex
+    justify-content: flex-end
+
+  +tablets
+    position: relative
+    z-index: 5
+
+.motivate__title
+  font-family: 'Roboto Condensed', sans-serif
+  font-weight: 700
+  font-size: rem(32px)
+  color: $white
+  text-transform: uppercase
+  margin-bottom: 15px
+  +laptops
+    width: 50%
+    margin-bottom: 0
+
+  +tablets
+    width: auto
+    margin-bottom: 50px
+
+.second__title-list
+  display: flex
+  justify-content: space-between
+  +laptops
+    flex-direction: column
+
+.motivate__descr
+  +Ubuntu(light)
+  font-size: rem(15px)
+  margin-bottom: 20px
+  line-height: 1.6
+  color: white
+  span
+    background-color: $orange
+    color: $black
+    padding: 2px 5px
+    margin: 0 3px
+  i.hidden-xs
+    font-style: normal
+  +laptops
+    width: 50%
+    margin-bottom: 10px
+
+  +tablets
+    font-size: 15px
+    min-height: 130px
+
+  +phones
+    width: 100%
+
+.row.motivate__link-wrap
+  margin-bottom: 60px
+  +laptops
+    position: relative
+    width: 50%
+    margin-left: auto
+    margin-right: 0
+    margin-bottom: 20px
+    &::after
+      padding-top: 40px
+      display: block
+      content: ' '
+      width: calc(100% + 50px)
+      height: 1px
+      background: url("../img/main/topTabletSeparator.png") no-repeat right center
+
+  +tablets
+    z-index: 5
+    width: auto
+    margin-left: 0
+    &::after
+      display: none
+
+.motivate__link
+  +hover(rgba(white, 0.3), none)
+  font-size: rem(15px)
+  &:hover
+    color: white
+
+.red__banner
+  display: none
+  width: 150%
+  padding: 15px 25px
+  margin-left: -50px
+  background-color: $red
+  margin-bottom: 30px
+  h5
+    +Ubuntu(bold)
+    color: $white
+  .banner__place
+    color: $white
+    font-size: 13px
+  a
+    +Ubuntu(medium)
+    text-decoration: underline
+    color: $white
+  +tablets
+    position: relative
+    display: block
+    h5, a, .banner__place
+      position: relative
+      z-index: 2
+
+  +phones
+    width: 250%
+    padding: 15px 30px
+
+.actions__title
+  +Ubuntu(medium)
+  font-size: rem(25px)
+  color: $white
+  margin-bottom: 30px
+  margin-left: 15px
+  +laptops
+    width: 50%
+
+  +tablets
+    width: 100%
+    margin-left: 0
+
+.actions__list
+  padding-left: 0
+  margin-left: 12px
+  +tablets
+    margin-left: 0
+
+.actions__item
+  position: relative
+  margin-bottom: 13px
+  &:hover
+    .date
+      background-color: rgba($orange, 0.7)
+      color: black
+    .action__link
+      color: $orange
+      span::after
+        background: $orange
+  &:nth-child(1n + 5)
+    +laptops
+      display: none
+
+.date
+  +Ubuntu(bold)
+  width: 50px
+  padding: 3px 0px 5px
+  background-color: rgba(white, 0.7)
+  text-align: center
+  transition: background $transitionSpeed $ease
+  line-height: 1
+  span
+    position: relative
+    display: block
+    padding-top: 5px
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      top: 1px
+      left: 50%
+      width: 7px
+      height: 2px
+      background-color: $black
+      transform: translate(-50%)
+
+.action__right
+  margin-left: 12px
+  +laptops
+    margin-left: 0
+    padding-left: 2px
+
+.action__link
+  +Ubuntu(medium)
+  font-size: rem(17px)
+  transition: all $transitionSpeed $ease
+  span
+    position: relative
+    display: inline
+    &::after
+      display: inline-block
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      height: 1px
+      background: rgba(white, 0.3)
+      transition: all $transitionSpeed $ease
+  &__tag
+    display: inline-block
+    position: relative
+    +Ubuntu(light)
+    font-size: 13px
+    margin-left: 1px
+    color: $white
+    padding: 0px 2px 0px 3px
+    background-color: $red
+    &::after
+      display: block
+      content: ''
+      position: absolute
+      right: -12px
+      top: 0px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 18px 12px 0 0
+      border-color: $red transparent transparent transparent
+
+.action__descr
+  +Ubuntu(italic)
+  font-size: rem(13px)
+  line-height: 1.4
+  color: #d9d9d9
+  margin-top: 7px
+
+.info__banner
+  display: flex
+  justify-content: space-around
+  align-items: flex-start
+  padding-top: 10px
+  width: 480px
+  height: 87px
+  background: url("../img/main/rectangle-icon.png") 100% center no-repeat
+  margin: 24px 0 0 71px
+  +laptops
+    margin: 0
+    margin-bottom: 25px
+
+  +tablets
+    display: none
+
+.info__banner-left
+  +Ubuntu(bold)
+  margin-left: 10px
+  h3
+    display: inline-block
+    margin-top: -3px
+    margin-bottom: 2px
+    font-size: rem(22px)
+    color: $white
+  .place
+    font-size: rem(13px)
+    color: $white
+
+.info__banner-right
+  padding-top: 10px
+  a
+    +Ubuntu(bold)
+    font-size: 15px
+    margin-left: -0px
+    padding: 15px
+    &:hover
+      color: $orange
+
+.info__banner-min
+  margin: 0 0 133px 0
+
+/****************************************************************
+ *Стили для части которая начинается с карты
+ ****************************************************************
+section
+  h2
+    font-family: 'Roboto Condensed', sans-serif
+    font-weight: 700
+    font-size: rem(40px)
+    color: $white
+    text-transform: uppercase
+    +phones
+      font-size: 29px
+
+.map
+  margin-bottom: -400px
+  +laptops
+    padding-top: 160px
+    margin-bottom: 0px
+
+  +tablets
+    margin: 0
+    padding-top: 20px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    &::before, &::after
+      display: none
+    .slick-dots
+      margin-left: auto
+      margin-right: auto
+    .map__item
+      &:first-child
+        margin-left: calc(45% - 30px)
+        flex-basis: calc(25% + 60px)
+      &:nth-child(3)
+        flex: 0 1 27%
+        margin-left: 20%
+      &:nth-child(4)
+        flex: 0 1 27%
+      &:nth-child(5)
+        flex: 0 1 26%
+      &:nth-child(6)
+        flex: 0 1 24%
+        margin-left: -20px
+      &:nth-child(7)
+        flex: 0 1 27%
+    +laptops
+      .map__item
+        flex: 0 1 33.3% !important
+        &:first-child
+          margin-left: 0
+          flex-basis: 33.3%
+        &:nth-child(3)
+          margin-left: 0
+        &:nth-child(6)
+          margin-left: 0
+
+    +tablets
+      .map__item
+        flex: 0 1 50% !important
+        &:first-child
+          flex-basis: 50%
+
+.map__container
+  max-width: 1440px
+  height: 1198px
+  background: url("../img/main/map.png") 0 0 no-repeat
+  background-size: cover
+  margin-left: -220px
+  margin-top: -240px
+  padding: 240px 0 0 220px
+  +desktops
+    margin-left: 0px
+    background-position: center 0
+    padding-left: 0
+
+  +laptops
+    padding-top: 330px
+    margin-top: -230px
+    margin-left: -80px
+    margin-right: -80px
+    padding-left: 80px
+    padding-right: 80px
+    height: auto
+    background-position: 0 20px
+    background-size: cover
+
+  +tablets
+    background-size: 760px
+    background-position: center
+    margin: 0
+    padding: 0
+    padding-top: 50px
+    height: auto
+
+  +phones
+    height: auto
+    padding: 25px 0 50px 0
+    background: transparent
+
+.map__item
+  margin-bottom: 65px
+  flex: 0 1 25%
+  padding-left: 15px
+  padding-right: 15px
+  +laptops
+    flex: 0 1 33.3%
+    margin-bottom: 50px
+
+  +tablets
+    flex: 0 1 50%
+    margin-bottom: 40px
+    text-align: left
+
+  +phones
+    flex: 0 1 100% !important
+    width: 100%
+    margin-bottom: 25px
+    text-align: center
+    &:first-child
+      display: block
+
+.map__title
+  +Ubuntu(bold)
+  font-size: rem(30px)
+  color: $white
+  margin: 0
+
+.map__descr
+  font-size: rem(18px)
+  color: $text-grey
+  line-height: 1
+  p
+    margin: 0
+
+.slick-custom-dots
+  .slick-dots
+    li
+      position: relative
+      font-size: 0
+      margin-right: 8px
+      cursor: pointer
+      &:last-child
+        margin-right: 0
+      &::before
+        display: inline-block
+        content: ' '
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background-color: white
+        transition: all $transitionSpeed $ease
+      &.slick-active
+        &::before
+          background: #e01c04
+      &:hover
+        &::before
+          background: $orange
+      button
+        display: none
+
+.slick-list *
+  &:focus
+    outline: none !important
+
+.slick-slide
+  &:focus
+    outline: none !important
+
+
+.shopping-line
+  +laptops
+    font-size: 0
+    span
+      font-size: 14px
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+      max-width: 130px

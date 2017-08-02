@@ -1,0 +1,15 @@
+extends ../_template
+
+block variables
+  - var title = 'Training'
+
+block content
+  .wrapper
+    .bg__pic.bg__pic--no-line
+      .container.main__container
+        // .order__container
+        .row
+          include ../common/_header
+          include ../common/_top-about
+          include ../common/_training-page
+    include ../common/_footer

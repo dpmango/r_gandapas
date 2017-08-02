@@ -1,0 +1,283 @@
+/************************************************
+ *Стандартная настройка!!!
+ ************************************************
+
+// adjustment vars
+$container-width: 1030px
+
+// adjustment styles
+body,
+html
+  width: 100%
+  height: 100%
+  font-size: 16px
+  min-width: 320px
+  overflow-x: hidden
+
+body
+  +Ubuntu
+  font-size: 16px
+  line-height: 1.42
+  -webkit-font-smoothing: antialiased
+  background: $white
+
+*
+  box-sizing: border-box
+  &:focus
+    outline: none !important
+
+.wrapper
+  min-height: 100%
+  overflow: hidden
+  position: relative
+  width: 100%
+
+.maincontent
+  padding-bottom: 50px
+
+.container
+  @extend %clearfix
+  width: $container-width
+  margin: 0 auto
+  &--narrow
+    max-width: 900px
+
+
+li
+  list-style: none
+
+ul
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none
+  transition: all .25s ease-in-out
+  &:hover
+    color: inherit
+    text-decoration: none
+
+footer
+  width: 100%
+  position: relative
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  +Ubuntu(bold)
+  margin-top: 0
+  color: $black
+
+/**********************************************
+ *Базовая настройка проекта!!!
+ **********************************************
+
+h1
+  font-size: rem(60px)
+
+h2
+  font-size: rem(32px)
+  font-family: "Roboto Condensed"
+
+h3
+  font-size: rem(25px)
+
+h4
+  font-size: rem(20px)
+  color: #414141
+
+a
+  color: $white
+  text-decoration: none
+  &.link
+    +Ubuntu(bold)
+    font-size: rem(15px)
+    color: $text-blue
+    &:hover
+      color: $text-blue
+      text-decoration: underline
+    &.dashed
+      border-bottom: 1px dashed $text-blue
+      &:hover
+        text-decoration: none
+        border-bottom: 2px dashed $text-blue
+
+ul
+  &.list
+    li
+      font-size: rem(15px)
+      list-style-type: decimal
+      &.circle
+        list-style-type: none
+        &:before
+          content: ""
+          display: block
+          position: absolute
+          width: 10px
+          height: 10px
+          background-color: $text-blue
+          border-radius: 50%
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+      &.circle-void
+        list-style-type: none
+        &:before
+          content: ""
+          display: block
+          position: absolute
+          width: 10px
+          height: 10px
+          border: 2px solid $text-blue
+          border-radius: 50%
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+
+input
+  +Ubuntu(light)
+  font-size: rem(15px)
+  width: 300px
+  height: 35px
+  padding: 0 15px
+  border: 1px solid $black
+
+.success
+  +Ubuntu(medium)
+  font-size: rem(15px)
+  color: $text-green
+
+.fail
+  +Ubuntu(medium)
+  font-size: rem(15px)
+  color: $text-red
+
+button, a
+  &.form__btn, &.btn-primary
+    +Ubuntu(bold)
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: rem(15px)
+    width: 200px
+    height: 38px
+    border: 1px solid $text-blue
+    border-radius: 9px 9px 9px 0
+    color: $white
+    transition: all $transitionSpeed $ease
+    .fa
+      margin-left: 5px
+      margin-top: 3px
+    &:hover
+      border-color: $blue
+    &.save
+      background-color: $text-blue
+      &:hover
+        background-color: $blue
+  &.btn-primary
+    width: auto
+    padding-left: 45px
+    padding-right: 45px
+
+.btn-danger
+  +Ubuntu(medium)
+  text-align: center
+  font-size: rem(25px)
+  border: 1px solid #ff0000
+  border-radius: 9px 9px 9px 0
+  background: #ff0000
+  color: $white
+  transition: all $transitionSpeed $ease
+  &:hover
+    background: #ac2925
+
+li
+  &.tab__item
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: rem(16px)
+      color: $text-blue
+      text-decoration: none
+      width: 200px
+      height: 40px
+      border: 1px solid $grey
+      &:hover
+        color: $black
+        background-color: $grey-light
+      &.inactive
+        color: $black
+        background-color: $grey-dark
+
+.quote
+  &:before
+    content: "\f100"
+    font-family: "FontaAwesome"
+    display: inline-block
+  &:after
+    content: "\f101"
+    font-family: "FontaAwesome"
+    display: inline-block
+
+.slick-dots
+  display: flex
+  justify-content: center
+  align-items: center
+  li
+    margin-right: 15px
+  button
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    background-color: $white
+    border: none
+    text-indent: 9999px
+  .slick-active
+    button
+      background-color: $red
+
+.fa-cloud-download
+  display: inline-block
+  width: 20px
+  height: 17px
+  background: url(../img/icons/download-ico.png) center center no-repeat
+  &:before
+    display: none
+
+.fa-volume-down
+  display: inline-block
+  width: 20px
+  height: 17px
+  background: url(../img/icons/audio-ico.png) center center no-repeat
+  &:before
+    display: none
+
+.fa-book
+  display: inline-block
+  width: 20px
+  height: 17px
+  background: url(../img/icons/book-ico.png) center center no-repeat
+  &:before
+    display: none
+
+.fa-shopping-bag
+  display: inline-block
+  width: 13px
+  height: 17px
+  margin-right: 5px
+  background: url(../img/icons/cart.svg) center center no-repeat
+  &:before
+    display: none
+
+.fa-play
+  display: inline-block
+  width: 19px
+  height: 25px
+  background: url(../img/icons/fa-play@2x.png) center center no-repeat
+  background-size: contain
+  &:before
+    display: none

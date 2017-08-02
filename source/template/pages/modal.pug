@@ -1,0 +1,57 @@
+extends ../_template
+
+block variables
+  - var title = 'Home page'
+
+block content
+  .wrapper
+    .bg__pic
+      .container.main__container
+        .row
+          include ../common/_banner
+          include ../common/_header
+          include ../common/_main-info
+          .container(style='margin: 200px 0; text-align: center')
+            .row
+              .col-sm-6.col-sm-offset-3
+                a.cartonbox.btn-primary(style='margin-bottom: 20px' href='#modalLetter' data-cb-design="modal-full" data-cb-type="inline") Модальное - подписаться на рассылку
+                a.cartonbox.btn-primary(style='margin-bottom: 20px' href='#modalEvents' data-cb-design="modal-full" data-cb-type="inline") Модальное - мероприятие (full)
+                a.cartonbox.btn-primary(href='#modalEventBox' data-cb-design="modal-boxed" data-cb-type="inline") Модальное - мероприятие (box)
+                  
+          div(style='display:none;')
+            #modalLetter.modal-box
+              .container.container--narrow
+                .row.modal-row
+                  .col-sm-8.modal-holder
+                    h2 Подпишитесь на рассылку!
+                    p Мы будем присылать по четвергам только полезные материалы,<br> напоминания о тренингах и анонсы новых программ. Никакого спама!
+                    form(action='')
+                      .form-group
+                        label Имя
+                        input.form-control(type='text' placeholder='имя')
+                      .form-group
+                        label Email
+                        input.form-control(type='email' placeholder='email')
+                      .form-group
+                        button(type='submit').btn-primary Подписаться
+                  .modal-image
+                    // image
+                    img(src='assets/img/modalImg_1.png')
+            
+            #modalEvents.modal-box
+              .container.container--narrow
+                .row.modal-row
+                  .col-sm-12.modal-btn-holder
+                    a(href='#').btn.btn-danger Принять участие 
+                    img(src='assets/img/modalInfo_2.png').img-responsive
+          
+            #modalEventBox.modal-box
+              .container.container--narrow
+                .row.modal-row
+                  .col-sm-12.modal-btn-holder
+                    .modal-close
+                    a(href='#').btn.btn-danger Принять участие 
+                    img(src='assets/img/modalInfo_3.png').img-responsive
+                                  
+                    
+    include ../common/_footer

@@ -1,0 +1,14 @@
+extends ../_template
+
+block variables
+  - var title = 'Home page'
+
+block content
+  .wrapper
+    .bg__pic
+      .container.main__container
+        .row
+          include ../common/_header
+          include ../common/_top-about
+          include ../common/_trainings-page
+    include ../common/_footer

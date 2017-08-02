@@ -1,0 +1,16 @@
+extends ../_template
+
+block variables
+  - var title = 'Home page'
+
+block content
+  .wrapper
+    .bg__pic
+      .container.main__container
+        .row
+          include ../common/_header
+          include ../common/_main-info
+          include ../common/_blog-page
+    include ../common/_footer
+
+    script(src="/assets/js/socials.js" defer)

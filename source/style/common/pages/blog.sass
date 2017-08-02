@@ -1,0 +1,622 @@
+/*****************************************************
+ *Стили для блога
+ *****************************************************
+.blog__main
+  position: relative
+  h4
+    color: $black
+
+.blog__main-list
+  padding-bottom: 25px
+
+.blog__main-item
+  +box-shadow(0px 0px 30px 2px $black)
+  padding: 30px 0 0
+  margin-bottom: 40px
+  background-color: $white
+  border-radius: 25px 25px 25px 0
+  overflow: hidden
+
+.blog__inner-container
+  padding: 0 20px
+
+.blog__inner-topside
+  display: flex
+  justify-content: space-between
+  align-items: center
+  h2
+    font-size: rem(60px)
+    letter-spacing: -1px
+    margin-bottom: 15px
+
+.search__mnu-link
+  display: none
+  +laptops
+    display: flex
+    align-items: center
+    border: 2px solid $white
+    border-radius: 10px
+    padding: 5px 15px 7px
+    margin-bottom: 25px
+    transition: all $transitionSpeed $ease
+    .fa
+      display: block
+      margin-left: 5px
+      margin-bottom: -3px
+    .fa-close
+      display: none
+    &:hover
+      text-decoration: none
+      color: $white
+    &.active
+      border: none
+      z-index: 200
+      .fa-close
+        display: block
+      .fa-bars
+        display: none
+
+.blog__main-title
+  font-size: rem(32px)
+  color: $black
+  text-transform: none
+  margin: 0
+
+.blog__main-podcast
+  +Ubuntu(italic)
+  font-size: rem(13px)
+  margin-bottom: 15px
+
+.blog__main-video
+  margin-bottom: 30px
+
+.blog__inner-list
+  padding-left: 15px
+  margin-bottom: 25px
+
+.blog__inner-item
+  font-size: rem(15px)
+  list-style-type: disc
+  margin-bottom: 15px
+
+.blog__main-audio
+  margin-bottom: 30px
+
+.blog__main-book
+  font-size: rem(15px)
+  margin-bottom: 25px
+  a
+    text-decoration: underline
+    color: $black
+
+.read__more-btn
+  margin-bottom: 20px
+  &:hover
+    text-decoration: none
+
+.tags__list
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin-bottom: 20px
+
+.blog__tags-title
+  font-size: rem(15px)
+  margin: 0
+
+.tag__item
+  margin-left: 5px
+
+.tag__link
+  font-size: rem(15px)
+  color: $black
+  text-decoration: underline
+  margin: 0
+
+.blog__items-footer
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  background-color: #3E3E3E
+  padding: 15px 20px
+  +tablets
+    flex-direction: column
+
+  +phones
+    padding: 15px 10px
+
+.blog__footer-left
+  font-size: rem(15px)
+  width: 42%
+  color: $white
+  +tablets
+    width: 100%
+    margin-bottom: 15px
+
+.blog__footer-right
+  width: 58%
+  +tablets
+    width: 100%
+
+.social__btns-list
+  display: flex
+
+.social__btn-item
+  display: flex
+  align-items: center
+  height: 20px
+  margin-right: 5px
+  padding: 0 5px
+  &:first-child
+    background-color: #2A67B4
+  &:nth-child(2)
+    background-color: #2B67B4
+  &:nth-child(3)
+    background-color: #0095E3
+  &:nth-child(4)
+    background-color: #4E81AA
+  &:last-child
+    position: relative
+    background-color: $white
+    margin-right: 0
+    margin-left: 3px
+    a
+      color: $black
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      left: -5px
+      width: 6px
+      height: 6px
+      background-color: $white
+      transform: rotate(45deg) translateY(-50%)
+    +phones
+      display: none
+
+.social__btn-link
+  +Ubuntu(medium)
+  font-size: rem(13px)
+  span
+    +Ubuntu
+  .fa
+    margin-right: 3px
+
+.pagination__wrap
+  padding-bottom: 40px
+  +laptops
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.pagination__top
+  display: flex
+  margin-bottom: 25px
+
+.pagination__bottom
+  +phones
+    display: none
+
+.pagination__left,
+.pagination__right
+  +Ubuntu
+  display: flex
+  align-items: center
+  font-size: rem(30px)
+  color: $white
+  cursor: pointer
+
+.pagination__left
+  margin-right: 15px
+  .fa
+    margin-right: 5px
+
+.pagination__right
+  .fa
+    margin-left: 5px
+
+.pagination__list
+  display: flex
+
+.pagination__item
+  margin-right: 10px
+  &:last-child
+    margin-right: 0
+  .pagination__link
+    +Ubuntu
+    font-size: rem(18px)
+    .fa
+      font-size: rem(15px)
+  &.inactive
+    .pagination__link
+      color: $text-grey
+  &.active
+    .pagination__link
+      color: $orange
+  &:first-child
+    .fa
+      margin-right: 5px
+  &:last-child
+    .fa
+      margin-left: 5px
+
+.blog__main-right
+  padding-top: 30px
+  +laptops
+    position: absolute
+    top: 0px
+    left: 100%
+    width: 270px
+    background-color: rgba($black, 0.7)
+    border: 2px solid $white
+    border-right: none
+    border-radius: 10px 0 0 10px
+    padding: 70px 25px 60px
+    opacity: 0
+    transition: .3s
+    &.active
+      opacity: 1
+      left: auto
+      right: 0
+      z-index: 100
+
+.mailto
+  +Ubuntu(medium)
+  font-size: rem(17px)
+  color: $white
+  margin-bottom: 25px
+  a
+    display: block
+    text-decoration: underline
+
+.form__search-wrap
+  display: flex
+  margin-bottom: 35px
+  button
+    +Ubuntu(medium)
+    height: 33px
+    margin-left: -5px
+    background-color: $white
+    border-radius: 0 0 15px 0
+    border: none
+    .fa
+      margin-right: 5px
+
+.form__search-input
+  height: 35px
+  max-width: 135px
+  background-color: rgba($grey, 0.3)
+  color: $white
+
+.blog__right-title
+  +Ubuntu(medium)
+  font-size: rem(20px)
+  color: $white
+  margin-bottom: 20px
+
+.search__form-list
+  margin-bottom: 30px
+
+.search__form-item
+  &.active
+    .search__form-link
+      +Ubuntu(bold)
+      color: $orange
+    .search__inner-list
+      position: relative
+      opacity: 1
+      left: 0
+
+.search__form-link
+  font-size: rem(17px)
+  margin-bottom: 15px
+
+.search__inner-list
+  position: absolute
+  padding-left: 15px
+  left: -9999px
+  opacity: 0
+  transition: .3s opacity
+
+.search__inner-item
+  margin-bottom: 10px
+  &.active
+    .search__inner-link
+      color: $orange
+
+.tags__wrap
+  margin-bottom: 40px
+
+.search__tags-list
+  display: flex
+  flex-wrap: wrap
+
+.search__tag-item
+  margin-right: 10px
+
+.search__tag-link
+  text-decoration: underline
+
+.search__banner
+  width: 100%
+  overflow: hidden
+  margin-bottom: 35px
+  img
+    width: 100%
+
+.socials__tape-list
+  display: flex
+  justify-content: space-around
+
+.sicial__tape-item
+  width: 20%
+  height: 45px
+  background-color: #397197
+  &:nth-child(2)
+    background-color: #00C1F5
+  &:nth-child(3)
+    background-color: #00EEF4
+  &:nth-child(4)
+    background-color: #005C84
+    transition: all $transitionSpeed $ease
+    .social__tape-link
+      &:hover
+        color: $red
+  &:last-child
+    background-color: #FF4841
+
+.social__tape-link
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  width: 100%
+  &:hover
+    text-decoration: none
+
+/*******************************************************
+ *Стили для постов
+ *******************************************************
+.blog__main-pic
+  width: 100%
+  height: 445px
+  overflow: hidden
+  margin-bottom: 25px
+  img
+    height: 100%
+
+.post__descr
+  font-size: rem(15px)
+  margin-bottom: 25px
+  span
+    +Ubuntu(bold)
+    display: inline-block
+    margin-right: 5px
+
+.post__quote
+  +Ubuntu(italic)
+  font-size: rem(15px)
+  margin-bottom: 25px
+  span
+    font-weight: bold
+
+.post__comments-count
+  +Ubuntu(bold)
+  font-size: rem(25px)
+  color: $black
+  background-color: $orange
+  padding: 0px 10px
+  margin: 30px 0 20px
+  transition: all $transitionSpeed $ease
+  &:hover
+    color: $white
+    text-decoration: none
+
+.comment__item
+  position: relative
+  padding-bottom: 25px
+  margin-bottom: 25px
+  color: $white
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    width: 80%
+    height: 1px
+    left: 0
+    bottom: 0
+    background-color: $white
+
+.comment__top
+  display: flex
+  align-items: center
+  margin-bottom: 15px
+
+.comment__author
+  @inclide Ubuntu(medium)
+  font-size: rem(18px)
+  text-decoration: underline
+  margin-right: 10px
+
+.comment__date
+  +Ubuntu(italic)
+  font-size: rem(15px)
+
+.comment__descr
+  font-size: rem(15px)
+  margin-bottom: 20px
+
+.comment__answer-link
+  font-size: rem(15px)
+  color: $orange
+  border-bottom: 1px dashed
+  transition: all $transitionSpeed $ease
+  .fa
+    margin-left: 5px
+    font-size: 10px
+  &:hover
+    color: $orange
+    text-decoration: none
+    border-bottom: none
+
+.feedback__form
+  width: 100%
+  h3
+    +Ubuntu
+    color: $white
+
+.feedback__socials
+  display: flex
+  align-items: center
+  margin-bottom: 30px
+  +tablets
+    flex-direction: column
+    align-items: flex-start
+
+.enter__by
+  font-size: rem(15px)
+  color: $white
+  margin-right: 10px
+
+.enter__social-list
+  display: flex
+
+.enter__social-item
+  width: 30px
+  height: 30px
+  margin-right: 5px
+  border-radius: 5px
+  border-top: 1px solid $white
+  border-bottom: 1px solid $white
+  &:first-child
+    background-color: #3375A7
+  &:nth-child(2)
+    background-color: #FF7600
+    border-top: none
+    border-bottom: none
+  &:nth-child(3)
+    background-color: #008BE8
+    border-bottom: none
+    border-top: none
+    .enter__social-link
+      color: $orange
+  &:nth-child(4)
+    background-color: #28579B
+  &:last-child
+    background-color: #474747
+
+.enter__social-link
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  transition: all $transitionSpeed $ease
+  &:hover
+    text-decoration: none
+    color: $white
+  .fa
+    font-size: 20px
+
+.feedback__input-list
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+  +tablets
+    flex-direction: column
+    margin-bottom: 0
+
+.feedback__input-item
+  display: flex
+  flex-direction: column
+  width: 32%
+  input
+    width: 100%
+  label
+    +Ubuntu(medium)
+    font-size: rem(13px)
+    color: $white
+  +tablets
+    width: 100%
+    margin-bottom: 15px
+
+.feedback__last-row
+  display: flex
+  justify-content: space-between
+  +tablets
+    flex-direction: column
+
+.last__row-left
+  display: flex
+  flex-direction: column
+  width: 66%
+  label
+    +Ubuntu(medium)
+    font-size: rem(13px)
+    color: $white
+  +tablets
+    width: 100%
+
+#textarea
+  max-width: 100%
+  height: 105px
+  resize: none
+  border: 1px solid $black
+
+.last__row-right
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 32%
+  +tablets
+    width: 100%
+
+.check__wrap
+  position: relative
+  display: flex
+  justify-content: space-between
+  padding-top: 23px
+  input
+    opacity: 0
+    width: 25px
+  label
+    color: $white
+    font-size: rem(11px)
+  .text__label
+    width: 90%
+    +tablets
+      width: 70%
+  +tablets
+    justify-content: flex-start
+
+.checkbox + label
+  position: absolute
+  display: block
+  width: 20px
+  height: 20px
+  background-color: $white
+  border: 1px solid $black
+  left: 0
+  top: 25px
+  cursor: pointer
+  +tablets
+    top: 23px
+
+.checkbox:checked + label
+  position: absolute
+  display: block
+  width: 20px
+  height: 20px
+  background-color: $white
+  border: 1px solid $black
+  left: 0
+  top: 25px
+  &:after
+    content: "\f00c"
+    font-family: "FontAwesome"
+    position: absolute
+    color: $black
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)

@@ -1,0 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Ubuntu:300,400,400i,500,700&subset=cyrillic');
+
+@mixin Ubuntu($style: regular) {
+	font-family: 'Ubuntu';
+
+	@if $style == bold {
+		font-weight: 700;
+	}
+
+	@if $style == light {
+		font-weight: 300;
+	}
+
+	@if $style == medium {
+		font-weight: 500;
+	}
+
+  @if $style == italic {
+		font-style: italic;
+	}
+}

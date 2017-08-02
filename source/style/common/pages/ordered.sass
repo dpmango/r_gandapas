@@ -1,0 +1,238 @@
+/********************************************
+ *Стили для страницы заказов
+ *********************************************
+.ordered-page
+  +laptops
+    padding-top: 60px
+
+.ordered__wrap
+  padding-top: 50px
+  padding-left: 25px
+  padding-bottom: 45px
+  +tablets
+    overflow-x: scroll
+
+.order__wrap
+  padding-top: 58px
+
+.table__wrap
+  margin-bottom: 40px
+  +tablets
+    width: 800px
+
+.table__order-cnt
+  margin-top: 50px
+
+.order__container
+  .mnu
+    margin-bottom: 0
+  .list-cart
+    padding-left: 20px
+    padding-right: 23px
+    padding-top: 2px
+    justify-content: flex-end
+    .info__top-item
+      padding: 0px 10px
+      &:first-child
+        margin-right: auto
+  .info__top-item
+    position: relative
+    &.user-item
+      margin-top: -6px
+      max-width: 168px
+      position: relative
+      padding: 10px 15px 5px 40px
+      padding-left: 32px !important
+      font-size: 14px
+      &:after
+        content: ''
+        display: block
+        width: 40px
+        height: 20px
+        position: absolute
+        left: 4px
+        top: 8px
+        background: url(../img/icons/user.png) center center no-repeat
+      a
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+    &.active.user-item
+      position: relative
+      z-index: 300
+      background-color: $black
+      &:after
+        background: url(../img/icons/user.svg) center center no-repeat
+      &:before
+        display: block
+        position: absolute
+        top: 0
+        bottom: 0px
+        content: ' '
+        width: 50px
+        right: 0px
+        background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.99)))
+        background: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.99))
+        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.99))
+        z-index: 9
+      .account__mnu
+        display: flex
+        flex-direction: column
+        position: absolute
+        width: 100%
+        top: 28px
+        left: 0px
+        padding: 15px 0
+        padding-left: 15px
+        background-color: $black
+        border-radius: 0 0 15px 15px
+        z-index: 200
+        font-size: 15px
+        .account__mnu-item
+          margin-bottom: 10px
+      a
+        text-overflow: clip
+    span
+      +Ubuntu(medium)
+      margin-left: 5px
+      text-decoration: underline
+  .account__mnu
+    display: none
+  .info__banner
+    margin: 27px 0px 136px 8px
+  table
+    width: 100%
+    margin-bottom: 15px
+    +tablets
+      width: 800px
+  td
+    padding: 4px 9px
+    width: 31%
+    &:nth-child(2)
+      width: 35%
+    span
+      +Ubuntu(medium)
+    .green
+      display: inline-block
+      +Ubuntu(medium)
+      color: $text-green
+    a
+      display: flex
+      align-items: center
+      color: $text-blue
+      .fa
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 11px
+        width: 20px
+        height: 20px
+        border: 1px solid $text-blue
+        border-radius: 50%
+        text-decoration: none
+        margin-right: 5px
+      span
+        font-weight: 400
+        line-height: 1
+        border-bottom: 1px solid $text-blue
+        transition: all $transitionSpeed $ease
+      &:hover
+        text-decoration: none
+        span
+          border-color: transparent
+  tbody
+    tr:first-child
+      td
+        padding-top: 20px
+
+.tablet__title
+  +Ubuntu(medium)
+  font-size: rem(20px)
+  width: 100%
+  color: $black
+  border-bottom: 1px solid #808080
+  padding: 17px 15px
+  margin-bottom: 0px
+  border-radius: 15px 15px 0 0
+  background-color: #F2F2F2
+  +tablets
+    width: 800px
+
+thead
+  background-color: #F2F2F2
+  border-bottom: 1px solid #808080
+
+.border__wrap
+  border: 1px solid #808080
+  border-radius: 15px 15px 15px 0
+  overflow: hidden
+
+.with__pic
+  td
+    width: auto
+    vertical-align: top
+    img
+      max-width: 100%
+      margin-right: 20px
+    &:first-child
+      width: 50%
+      img
+        display: inline-block
+      .text
+        display: inline-block
+        h4
+          display: block
+          color: $black
+          font-size: rem(18px)
+        .version
+          font-size: rem(15px)
+          font-weight: 400
+          span
+            font-weight: 400
+            display: block
+          a
+            display: inline-block
+            color: $text-blue
+            &:hover
+              color: $orange
+    &:last-child
+      a
+        color: $white
+      span
+        display: block
+
+
+.ordered__title
+  margin-left: 25px
+
+.ordered__table-title
+  font-size: rem(32px)
+  letter-spacing: -0.5px
+  margin-bottom: 20px
+
+.ordered__page
+  .container
+    padding-bottom: 91px
+
+.table__order-cnt
+  td
+    font-size: rem(20px)
+    color: #000
+    font-weight: 500
+    padding: 14px 12px
+  &-price
+    display: flex
+    span
+      font-weight: 400
+      display: inline-block
+      min-width: 80px
+    &-btn
+      flex: 0 0 auto
+      display: flex
+      flex-direction: column
+      a
+        margin-bottom: 10px
+      &--status
+        font-size: 15px
+        span
+          margin-bottom: 10px

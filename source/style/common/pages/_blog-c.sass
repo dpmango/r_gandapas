@@ -1,0 +1,56 @@
+/*******************************************************
+ *Стили для блога
+ ********************************************************
+
+.blog
+  h2
+    a
+      border-bottom: 2px solid white
+      line-height: 1.1
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: transparent
+        color: $orange
+
+.blog__list
+  padding-bottom: 110px
+  +tablets
+    padding-bottom: 70px
+
+  +phones
+    padding-bottom: 50px
+
+.blog__item
+  position: relative
+  height: 170px
+  +laptops
+    &:nth-child(1n + 3)
+      display: none
+
+  +tablets
+    height: auto
+    margin-bottom: 25px
+
+.blog__link
+  width: 100%
+  transition: all $transitionSpeed $ease
+  &:hover
+    color: $white
+    .blog__descr
+      color: $orange
+
+.blog__pic
+  width: 100%
+  height: 170px
+  overflow: hidden
+  img
+    width: 100%
+
+.blog__descr
+  margin-top: 10px
+  transition: color $transitionSpeed $ease
+  p
+    font-size: rem(16px)
+    margin: 0
+    +tablets
+      font-size: 15px

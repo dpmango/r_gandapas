@@ -1,0 +1,85 @@
+// CONTENT
+.content
+  a
+    border-bottom: 1px solid transparent
+    color: #0084ff
+    &:hover
+      border-color: #0084ff
+  ul, ol
+    color: #414141
+    li
+      margin-bottom: 10px
+      ul
+        padding-left: 30px
+        li
+          margin-bottom: 2px
+
+
+
+  ul
+    list-style: none
+    margin-left: 0
+    li
+      list-style: none
+      &::before
+        content: "• "
+        color: #0084ff
+        font-size: 1.6em
+      ul
+        li
+          &::before
+            margin-right: 10px
+            display: inline-block
+            border: 1px solid #0084ff
+            content: ''
+            border-radius: 50%
+            height: 7px
+            width: 7px
+            font-size: 0
+
+  ol
+    list-style: decimal
+    margin-left: 18px
+    padding: 0
+    li
+      list-style: decimal
+
+
+a.link-dotted
+  color: #0084ff
+  border-bottom: 1px dotted rgba(#0084ff, .5)
+  transition: all $transitionSpeed $ease
+  &:hover
+    border-color: #0084ff
+    color: $orange
+
+.form-group
+  label
+    font-size: 13px
+    color: #414141
+
+
+.form-control
+  border-radius: 0
+  font-size: 15px
+  border-color: $black
+  &:focus
+    box-shadow: none
+    outline: none
+    border-color: #0084ff
+  &::placeholder
+    color: $black
+
+
+.alert
+  background: none
+  border-radius: 0
+  border: 0
+  font-size: 15px
+  padding: 10px 0
+  &-success
+    color: #1ac508
+  &-error
+    color: #f10303
+  strong
+    padding-right: 5px

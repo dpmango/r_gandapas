@@ -1,0 +1,55 @@
+section.account__page
+	.container
+		.blog__inner-topside
+			h2 Профиль пользователя
+		.product__wrap
+			h3.product__title Физическое лицо
+			form.account__form(type="GET")
+				ul.input__list
+					li.input__item
+						label(for="name") Имя*
+						input#name(type="text" name="name" required)
+					li.input__item
+						label(for="email") Email*
+						input#email(type="email" name="email" required)
+					li.input__item
+						label(for="phone") Телефон*
+						input#phone(type="text" name="phone" required)
+				h3.product__title Юридическое лицо
+				ul.input__list
+					li.input__item
+						label(for="inn") ИНН (после ввода данные о компании заполнятся автоматически)
+						input#inn(type="text" name="inn")
+					li.input__item
+						label(for="company") Название компании*
+						input#company(type="text" name="company" required)
+					li.input__item
+						label(for="companyAddress") Юридический адрес*
+						textarea#companyAddress
+					li.input__item
+						label(for="kpp") КПП*
+						input#kpp(type="text" name="kpp" required)
+					li.input__item
+						label(for="owner") Контактное лицо
+						input#owner(type="text" name="owner" required)
+					li.input__item
+						label(for="companyEmail") E-mail*
+						input#companyEmail(type="email" name="companyEmail" required)
+				h3.product__title Адрес доставки*
+				ul.input__list
+					li.input__item
+						textarea(name="address")
+				.changepassword__wrap
+					h3.product__title Изменение пароля
+					| пароль должен быть не менее 6ти символов
+					span Последняя авторизация: 10.12.2016 08：48：56
+				ul.input__list.change-pass
+					li.input__item
+						label(for="newPassword") Новый пароль
+						input#newPassword(type="password" name="newPassword")
+					li.input__item
+						label(for="confirm") Подтверждение нового пароля
+						input#confirm(type="password" name="confirm")
+				.account__form-btns
+					button.form__btn.save(type="submit") Сохранить
+					button.form__btn.cancel(type="button") Отмена

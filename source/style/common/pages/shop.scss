@@ -1,0 +1,337 @@
+/**************************************************
+Стили для страницы Магазина
+**************************************************/
+.shop__wrap{
+	background-color: $white;
+	border-radius: 25px 25px 0 0;
+	overflow: hidden;
+	h3{
+		@inlude Ubuntu(bold);
+		font-size: rem(32px);
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	h5{
+		font-size: rem(18px);
+	}
+	@include laptops(){
+		margin-left: -30px;
+		margin-right: -30px;
+		border-radius: 0;
+	}
+}
+section{
+	.training__item{
+		@include phones(){
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 25px;
+			width: 280px;
+			max-width: 100%;
+			box-shadow: 0 0 43px 0.1px rgba(0,0,0, .3);
+		}
+	}
+	.slick-dots{
+		button{
+			background-color: #002D66;
+		}
+		.slick-active{
+			button{
+				background-color: $red;
+			}
+		}
+	}
+}
+.shop__topside{
+	position: relative;
+	height: 155px;
+	width: 100%;
+	background: url('../img/shop-page/bg.png') center no-repeat;
+	background-size: cover;
+	.date{
+		position: absolute;
+		background: transparent;
+		@include Ubuntu();
+		font-size: rem(25px);
+		width: auto;
+		top: 10px;
+		left: 50%;
+	}
+	@include tablets(){
+		background: url('../img/shop-page/bg-tablet.png') 100% center no-repeat;
+		.date{
+			left: 30%;
+		}
+	}
+}
+.shop__container{
+	padding: 0 25px;
+	@include tablets{
+		padding-top: 25px;
+	}
+}
+.shop__mnu-list{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 40px;
+	margin-bottom: 40px;
+	@include tablets(){
+		display: none;
+	}
+}
+.shop__mnu-link{
+	@include Ubuntu(light);
+	font-size: rem(20px);
+	color: $text-blue;
+	border-bottom: 1px dashed $blue;
+	transition: all $transitionSpeed $ease;
+	&:hover{
+		@include Ubuntu(medium)
+		color: $orange;
+		border-color: transparent;
+		text-decoration: none;
+	}
+}
+
+.training__item{
+	@include box-shadow(0 0 25px 0.1px $black);
+}
+.shop__training-date{
+	font-size: rem(15px);
+	span{
+		margin-left: 3px;
+	}
+}
+.shop__training-guiding{
+	font-size: rem(15px);
+	margin-bottom: 15px;
+	span{
+		display: block;
+		@include Ubuntu(bold);
+	}
+}
+.tariff__list{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.tarrif__item{
+	@include Ubuntu(light);
+	font-size: rem(20px);
+	width: 50%;
+	color: $text-blue;
+	margin-bottom: 5px;
+	span{
+		@include Ubuntu();
+		display: block;
+		color: $black
+	}
+}
+.shop__training-btns{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	.form__btn{
+		width: 48%;
+		color: $black;
+		border-color: $black;
+	}
+	.save{
+		color: $white;
+		border-color: $text-blue;
+	}
+}
+.shop__training-bottom{
+	display: flex;
+	justify-content: space-between;
+}
+.shop__training-category{
+	font-size: rem(13px);
+	span{
+		text-decoration: underline;
+		margin-left: 5px;
+	}
+}
+.shop__training-comments{
+	display: flex;
+	align-items: center;
+	color: $text-blue;
+	font-size: rem(15px);
+}
+.video__type{
+	.training__item{
+		min-height: 400px;
+		@include tablets(){
+			min-height: 0;
+		}
+	}
+	.training__pic{
+		margin-bottom: 10px;
+	}
+	.training__content{
+		min-height: 0px;
+		height: calc(100% - 215px);
+		@include tablets(){
+			min-height: 0;
+			height: calc(100% - 170px);
+		}
+
+		@include phones(){
+			min-height: 0px;
+			height: calc(100% - 215px);
+		}
+	}
+	.price{
+		padding-left: 0;
+	}
+	.shop__training-date {
+		.fa{
+			margin-left: 5px;
+		}
+	}
+}
+.another__btn{
+	.play__btn{
+		border: none;
+		width: 100px;
+		transform: translate(-50%, -30%);
+	}
+}
+.special{
+	position: relative;
+	padding-bottom: 50px;
+	&:before {
+		bottom: 50px;
+	}
+	&:after{
+		content: "";
+		display: block;
+		position: relative;
+		width: 80%;
+		height: 1px;
+		left: 50%;
+		bottom: -25px;
+		transform: translateX(-50%);
+		background: #000000;
+		box-shadow: inset -53px 10px 54px -7px white, inset 53px 10px 54px -7px white;
+	}
+	@include phones() {
+		&:after {
+			top: 50px;
+			width: 100%;
+			left: 0px;
+			right: 0px;
+			transform: translateX(0);
+		}
+	}
+	.womens-day{
+		position: relative;
+		&:after{
+			content: "8 марта - подарок";
+			@include Ubuntu(medium);
+			font-size: rem(16px);
+			color: $white;
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			width: 182px;
+			height: 33px;
+			background: url('../img/icons/icon-large.png') center no-repeat;
+			background-size: cover;
+			left: -11px;
+			top: 168px;
+		}
+		@media (max-width: 768px ) {
+			&:after {
+				top: 123px;
+			}
+		}
+
+	}
+	.new{
+		position: relative;
+		&:after{
+			content: "Новинка";
+			@include Ubuntu(medium);
+			font-size: rem(16px);
+			color: $white;
+			display: block;
+			position: absolute;
+			width: 106px;
+			height: 33px;
+			background: url('../img/icons/icon.png') center no-repeat;
+			background-size: cover;
+			left: -11px;
+			top: 168px;
+			text-align: center;
+		}
+		@media (max-width: 768px ) {
+			&:after {
+				top: 123px;
+			}
+		}
+
+	}
+	.paket{
+		position: relative;
+		&:after{
+			content: "Пакет";
+			@include Ubuntu(medium);
+			font-size: rem(16px);
+			color: $white;
+			display: block;
+			position: absolute;
+			width: 106px;
+			height: 33px;
+			background: url('../img/icons/icon.png') center no-repeat;
+			background-size: cover;
+			left: -11px;
+			top: 168px;
+			text-align: center;
+
+		}
+		@media (max-width: 768px ) {
+			&:after {
+				top: 123px;
+			}
+		}
+
+	}
+}
+.about__shop-list{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	flex-wrap: wrap;
+}
+.about__shop-item{
+	width: 23%;
+	font-size: rem(13px);
+	@include phones(){
+		width: 100%;
+		margin-bottom: 25px;
+	}
+}
+.payments__list{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+}
+.payment__item{
+	display: flex;
+	align-items: center;
+	width: 16%;
+	margin-bottom: 25px;
+	img{
+		margin-right: 10px;
+	}
+	@include laptops(){
+		width: 30%;
+		&:first-child{
+			width: 100%;
+		}
+	}
+	@include phones(){
+		width: 50%;
+	}
+}

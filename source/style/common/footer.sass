@@ -1,0 +1,272 @@
+.footer
+  position: relative
+  width: 100%
+  padding: 36px 0 25px
+  background-color: $black
+  color: $text-grey
+
+.footer__wrap
+  padding: 0 35px 0 25px
+  h5
+    +Ubuntu(medium)
+    font-size: 17px
+    color: $white
+  +desktops
+    padding: 0 20px
+
+  +phones
+    padding: 0 0
+
+.footer__first-row
+  margin-bottom: 16px
+
+.follow__descr
+  font-size: 13px
+  line-height: 1.2
+  color: $text-grey
+  p
+    margin: 0
+
+.socials__wrap
+  +laptops
+    position: absolute
+    top: 165px
+    left: 55%
+    transform: translateX(-50%)
+
+  +tablets
+    padding-left: 35px
+    top: 220px
+    left: 0
+    transform: none
+
+  +phones
+    padding-left: 15px
+
+.socials__list
+  margin-top: 5.5px
+  margin-left: -3px
+  display: flex
+  font-size: 0
+  +tablets
+    margin-bottom: 20px
+    padding-right: 35px
+    padding-left: 20px
+
+  +phones
+    padding-right: 15px
+    padding-left: 15px
+
+.social__item
+  background-color: #397197
+  transition: all $transitionSpeed $ease
+  +tablets
+    flex: 1 1 auto
+
+  &:nth-child(2)
+    background-color: #00C1F5
+  &:nth-child(3)
+    background-color: #00EEF4
+  &:nth-child(4)
+    background-color: #005C84
+  &:nth-child(5)
+    background-color: #FF4841
+  &:nth-child(6)
+    background-color: #E6E1D7
+  &:nth-child(7)
+    background-color: #00C7EC
+  &:nth-child(8)
+    background-color: $orange
+  &:nth-child(9)
+    background-color: #00A6E3
+  &:hover
+    background: white
+    &:nth-child(1) a
+      color: #397197
+    &:nth-child(2) a
+      color: #00C1F5
+    &:nth-child(3) a
+      color: #00EEF4
+    &:nth-child(4) a
+      color: #005C84
+    &:nth-child(5) a
+      color: #FF4841
+    &:nth-child(6) a
+      color: #E6E1D7
+    &:nth-child(7) a
+      color: #00C7EC
+    &:nth-child(8) a
+      color: $orange
+    &:nth-child(9) a
+      color: #00A6E3
+
+.social__link
+  font-size: 1rem
+  width: 33px
+  height: 35px
+  display: flex
+  align-items: center
+  justify-content: center
+  +tablets
+    flex: 1 1 100px
+    width: auto
+    height: 32px
+
+.appstore__wrap
+  margin-left: -5px
+  margin-top: 5.5px
+  display: flex
+  align-items: center
+  transition: all $transitionSpeed $ease
+  +tablets
+    margin-left: 0
+
+  img
+    transition: opacity $transitionSpeed $ease
+  &:hover
+    img
+      opacity: .7
+
+.appstore__descr
+  padding-left: 8px
+  p
+    font-size: 13px
+    line-height: 1.2
+    margin: 0
+
+.footer__form
+  margin-bottom: 13px
+
+.email__input
+  +laptops
+    display: flex
+    justify-content: flex-end
+    position: absolute
+    right: 20px
+    top: 40px
+    max-width: 300px
+    .input__wrap
+      width: 100%
+
+  +tablets
+    position: relative
+    top: 0
+    right: 0
+    max-width: 100%
+    margin-bottom: 25px
+    .input__wrap
+      width: 100%
+      input
+        width: 100%
+
+.search__input
+  +laptops
+    margin-bottom: 80px
+
+  +tablets
+    margin-bottom: 130px
+
+.input__wrap
+  display: flex
+  align-items: center
+  position: relative
+  overflow: hidden
+  input
+    -webkit-apperance: none
+    border: 2px solid transparent
+    height: 35px
+    font-size: 15px
+    flex: 1 1 auto
+    color: $white
+    border-radius: 0 0 10px 0
+    background-color: rgba(white, 0.2)
+    transition: all $transitionSpeed $ease
+    &::placeholder
+      color: white
+    &:focus
+      outline: none
+      border-color: $orange
+    +laptops
+      width: 100%
+  button
+    position: absolute
+    right: 0px
+    top: 0px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 10px 12px 9px 10px
+    color: $black
+    background-color: $white
+    border-radius: 0 0 10px 0
+    border: none
+    min-width: 115px
+    +Ubuntu(medium)
+    font-size: 15px
+    line-height: 1.1
+    transition: all $transitionSpeed $ease
+    .fa
+      margin-right: 5px
+    &:hover
+      background-color: $red
+      color: white
+
+.footer
+  &__bottom
+    display: flex
+    align-items: center
+    margin-right: 30px
+    +laptops
+      justify-content: space-around
+
+    +tablets
+      padding-bottom: 20px
+      margin-right: 0
+      flex-direction: column
+      align-items: flex-start
+  &__author
+    flex: 0 0 250px
+    display: flex
+    align-items: flex-end
+    +laptops
+      flex-basis: 180px
+
+    +tablets
+      flex: 0 0 auto
+
+    .footer__info
+      margin-bottom: -5px
+      margin-left: 10px
+  &__contacts
+    margin-left: auto
+    margin-top: 12px
+    margin-right: -2px
+    display: flex
+    .footer__info:first-child
+      flex: 0 0 auto
+    +tablets
+      flex: 1 0 auto
+      width: 100%
+      margin-left: 0
+      flex-direction: column
+      align-items: stretch
+      .footer__info
+        display: flex
+        flex-wrap: wrap
+        p
+          margin-right: 5px
+  &__info
+    +Ubuntu(light)
+    font-size: 13px
+    margin-left: 25px
+    p
+      margin: 0
+    +tablets
+      margin-left: 0
+      flex: 0 0 auto
+      margin-top: 15px
+
+.hoverable-link
+  padding-bottom: 1px
+  +hover($white, none)
+  transition: all $transitionSpeed $ease

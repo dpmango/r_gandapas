@@ -1,0 +1,63 @@
+/**********************************************
+ *Стили для страницы аккаунтов
+ **********************************************
+.account__page
+  .product__title
+    font-size: rem(32px)
+    margin-top: 20px
+    margin-bottom: 18px
+    letter-spacing: -0.7px
+    font-weight: 600
+  input
+    width: 354px
+  .input__item textarea
+    width: 354px
+
+.account__form
+  padding-bottom: 31px
+
+.input__list
+  margin-bottom: 60px
+
+.input__item
+  display: flex
+  flex-direction: column
+  margin-bottom: 25px
+  label
+    +Ubuntu(bold)
+    font-size: rem(13px)
+  textarea
+    width: 300px
+    height: 135px
+    resize: none
+    border: 1px solid $black
+    padding: 15px
+  +phones
+    textarea, input
+      width: 100%
+
+.changepassword__wrap
+  position: relative
+  margin-bottom: 15px
+  font-size: rem(15px)
+  span
+    position: absolute
+    left: 41%
+    top: 10px
+    +tablets
+      display: none
+  h3
+    margin-bottom: 15px
+
+.account__form-btns
+  display: flex
+  button
+    width: 158px
+  .save
+    margin-right: 15px
+  .cancel
+    color: $text-blue
+    background-color: $white
+
+.change-pass
+  margin-bottom: 33px

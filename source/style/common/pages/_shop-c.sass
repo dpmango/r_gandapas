@@ -1,0 +1,302 @@
+/************************************************************
+ *Стили для интернет магазина
+ **************************************************************
+.shop
+  position: relative
+  margin-bottom: 50px
+  +desktops
+    padding-bottom: 0
+
+  .container
+    position: relative
+    padding-bottom: 30px
+    &:after
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      content: ""
+      display: block
+      width: 100%
+      height: 2px
+      background: url("../img/main/shopSeparator.png") no-repeat center
+      background-size: contain
+    +laptops
+      margin-top: -50px
+      padding-top: 40px
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        content: ""
+        display: block
+        width: 100%
+        height: 2px
+        background: url("../img/main/shopSeparator.png") no-repeat center
+        background-size: contain
+
+    +tablets
+      margin-top: 0
+
+section
+  .container
+    padding: 0 46px 60px 45px
+    +laptops
+      padding-left: 30px
+      padding-right: 30px
+
+    +tablets
+      padding: 0 15px
+  h2
+    margin-bottom: 25px
+    text-align: left
+  h4
+    color: $white
+
+.shop__list-wrap
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.shop__list-container
+  width: 30%
+  +laptops
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+
+.shop__title-wrap
+  +laptops
+    order: -1
+    width: 150px
+    margin-top: 8px
+
+  +phones
+    margin-top: 20px
+    width: auto
+    margin-bottom: 5px
+
+  h4
+    font-size: 23px
+    +Ubuntu(medium)
+
+.shop__list
+  display: flex
+  flex-direction: column
+  margin-bottom: 15px
+  width: 100%
+  +laptops
+    flex-direction: row
+    justify-content: space-between
+
+  +tablets
+    flex-direction: column
+
+  .slick-dots
+    +tablets
+      z-index: 5
+      margin-top: -5px
+
+.shop__item
+  position: relative
+  height: 170px
+  margin-bottom: 25px
+  .front__shadow
+    opacity: 0
+    position: absolute
+    left: 50%
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($black, 0.5)
+    transition: all 0.3s $ease
+    transform: translateX(-50%)
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    right: -10px
+    top: -10px
+    width: 90px
+    height: 90px
+    +phones
+      right: 0
+      top: 0
+  &:hover
+    .front__shadow
+      opacity: 1
+  &.new
+    &:after
+      background: url("../img/icons/icon-6.png") center no-repeat
+      background-size: cover
+  &.action
+    &:after
+      background: url("../img/icons/icon-4.png") center no-repeat
+      background-size: cover
+  &.hit
+    &:after
+      background: url("../img/icons/icon-5.png") center no-repeat
+      background-size: cover
+  &.womens__day
+    &:after
+      background: url("../img/icons/icon-1.png") center no-repeat
+      background-size: cover
+  &.mans__day
+    &:after
+      background: url("../img/icons/icon-2.png") center no-repeat
+      background-size: cover
+  &.half__price
+    &:after
+      background: url("../img/icons/icon-3.png") center no-repeat
+      background-size: cover
+  +laptops
+    width: 48%
+    height: 220px
+
+  +tablets
+    margin-top: 10px
+    height: 300px
+    width: 100%
+    margin-bottom: 50px
+
+  +phones
+    height: 220px
+
+  +phones-s
+    height: 170px
+
+.shop__link
+  width: 100%
+  height: 100%
+  &:focus
+    outline: none
+  &:hover
+    color: $white
+    .play__btn--have-text
+      justify-content: space-between
+      width: auto
+      padding: 0 10px
+      border-radius: 25px 25px 25px 25px
+      span
+        display: inline-block
+      .fa
+        margin-right: 15px
+    .info__title
+      color: $orange
+      text-decoration: underline
+    .price
+      background-color: $orange
+      span
+        display: block
+    .buy__tonque
+      opacity: 1
+
+.shop__pic
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    min-width: 100%
+    min-height: 100%
+    width: auto
+    height: auto
+
+.play__btn
+  position: absolute
+  display: flex
+  align-items: center
+  justify-content: center
+  left: 50%
+  top: 50%
+  width: 50px
+  height: 50px
+  border: 2px solid $white
+  border-radius: 50%
+  transform: translate(-50%, -50%)
+  .fa
+    font-size: 25px
+  span
+    +Ubuntu(medium)
+    display: none
+    font-size: 15px
+
+.shop__info-container
+  position: absolute
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  padding: 0 25px 10px
+
+.info__type
+  font-size: rem(12px)
+
+.info__title
+  font-size: rem(15px)
+  &:focus
+    color: white
+
+.price
+  +Ubuntu(medium)
+  font-size: rem(17px)
+  padding: 2px 15px
+  color: $black
+  background-color: $white
+  border-radius: 0 0 10px 0
+  span
+    display: none
+    font-size: 11px
+    transition: .3s
+
+.buy__tonque
+  position: relative
+  width: 100%
+  padding: 10px 0
+  padding-left: 25px
+  background-color: $white
+  border-radius: 0 0 15px 0
+  opacity: 0
+  transition: .3s opacity
+  z-index: 100
+  h4
+    color: $orange
+    margin: 0
+
+.more__link-wrap
+  +laptops
+    order: -1
+    margin-bottom: 25px
+
+  +tablets
+    margin-left: auto
+
+  +phones
+    order: 1
+    margin-left: auto
+    margin-right: auto
+    margin-top: 15px
+    margin-bottom: 15px
+
+.shop__more-link
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 205px
+  height: 35px
+  border: 1px solid $grey
+  border-radius: 10px 10px 10px 0
+  margin: 0 auto
+  transition: all $transitionSpeed $ease
+  &:hover
+    background: white
+    color: $orange
+    // color: $white;

@@ -1,0 +1,520 @@
+extends ../_template
+
+block variables
+  - var title = 'Tech'
+
+block content
+  .content-wrapper
+    // header
+    // main-content
+    .main-content.hint-wrapper
+      .main-content-inner.container-wrapper
+        .container
+          .row.catalog-wrapper.content
+            .col-md-offset-1.col-md-10
+              h1
+                | Заголовок первого уровня <br> (roboto, 60px/60px, #000)
+              p
+                | Ах, не говорите мне про Австрию! Я ничего не понимаю, может быть, но Австрия никогда не хотела и не хочет войны.
+                | Она предает нас. Россия одна должна быть спасительницей Европы. Наш благодетель знает свое высокое призвание и
+                | будет верен ему. Вот одно, во что я верю. Нашему доброму и чудному государю предстоит величайшая роль в мире, и
+                | он так добродетелен и хорош, что Бог не оставит его, и он исполнит свое призвание задавить гидру революции,
+                | которая теперь еще ужаснее в лице этого убийцы и злодея. Мы одни должны искупить кровь праведника.
+              p
+                | На кого нам надеяться, я вас спрашиваю?.. Англия с своим коммерческим духом не поймет и не может понять всю
+                | высоту души императора Александра. Она отказалась очистить Мальту. Она хочет видеть, ищет заднюю мысль наших
+                | действий.
+              h2 h2
+              p
+                | Что они сказали Новосильцеву? Ничего. Они не поняли, они не могли понять самоотвержения нашего императора,
+                | который ничего не хочет для себя и все хочет для блага мира. И что они обещали? Ничего. И что обещали, и того не
+                | будет! Пруссия уже объявила, что Бонапарте непобедим и что вся Европа ничего не может против него... И я не верю
+                | ни в одном слове ни Гарденбергу, ни Гаугвицу. Я верю в одного Бога и в высокую судьбу нашего милого
+                | императора.
+              h3 h3
+              p
+                | В то время как Анна Павловна назвала императрицу, лицо ее вдруг представило глубокое и искреннее выражение
+                | преданности и уважения, соединенное с грустью, что с ней бывало каждый раз, когда она в разговоре упоминала о
+                | своей высокой покровительнице.
+              h4 Заголовок четвертого уровня 
+              p
+                | Князь равнодушно замолк, Анна Павловна, с свойственною ей придворною и женскою ловкостью и быстротою такта,
+                | захотела и щелкануть князя за то, что он дерзнул так отозваться о лице, рекомендованном императрице, и в то же
+                | время утешить его.
+              h2 Ссылки
+              p
+                a(href='#') Читать далее
+              p
+                a(href='#').link-dotted Читать далее
+                      
+              .row
+                .col-md-6.col-xs-12
+                  h3 Буллиты
+                  ul
+                    li
+                      | Гостиная Анны Павловны начала понемногу наполняться.
+                      br
+                      | Приехала высшая знать Петербурга, люди
+                      | 					самые разнородные
+                    li Приехала дочь князя Василия, красавица Элен
+                    li
+                      | Она была в шифре и бальном платье
+                      ul
+                        li Маленькая княгиня Болконская
+                        li Приехал князь Ипполит, сын князя Василия
+                        li приехал и аббат Морио и многие другие
+                    li Молодая княгиня Болконская приехала с работой в шитом золотом мешке
+                    li Как это бывает у вполне привлекательных женщин
+                .col-md-6.col-xs-12
+                  h3 Нумерованный список
+                  ol
+                    li
+                      | Гостиная Анны Павловны начала понемногу наполняться.
+                      br
+                      | Приехала высшая знать Петербурга, люди
+                      | 					самые разнородные
+                    li Приехала дочь князя Василия, красавица Элен
+                    li
+                      | Она была в шифре и бальном платье
+                      ol
+                        li Маленькая княгиня Болконская
+                        li Приехал князь Ипполит, сын князя Василия
+                        li приехал и аббат Морио и многие другие
+                    li Молодая княгиня Болконская приехала с работой в шитом золотом мешке
+                    li Как это бывает у вполне привлекательных женщин
+              h2 Элементы форм
+              form
+                .row
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label(for='exampleInputText1') Плейсхолдер
+                      input#exampleInputText1.form-control(type='text', placeholder='Text')
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label(for='exampleInputText2') Неактивный плейсхолдер
+                      input#exampleInputText2.form-control(type='text', placeholder='Text', disabled='')
+                  .col-md-4.col-xs-12
+                    .form-group.has-error
+                      label(for='exampleInputText3') Плейсхолдер с ошибкой
+                      input#exampleInputText3.form-control(type='text', placeholder='Text')
+
+                .row
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label(for='exampleSelect1') select
+                      select#exampleSelect1.form-control
+                        option Значение 1
+                        option Значение 2
+                        option Значение 3
+                        option Значение 4
+                        option Значение 5
+                        option Значение 6
+                        option Значение 7
+                        option Значение 8
+                        option Значение 9
+                        option Значение 10
+                        option Значение 11
+                        option Значение 12
+                        option Значение 13
+                        option Значение 14
+                        option Значение 15
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label(for='exampleSelect2') select:disabled
+                      select#exampleSelect2.form-control(disabled='')
+                        option Значение 1
+                        option Значение 2
+                        option Значение 3
+                        option Значение 4
+                        option Значение 5
+                        option Значение 6
+                        option Значение 7
+                        option Значение 8
+                        option Значение 9
+                        option Значение 10
+                        option Значение 11
+                        option Значение 12
+                        option Значение 13
+                        option Значение 14
+                        option Значение 15
+                .row
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label(for='exampleSelect3') select:multiple
+                      select#exampleSelect3.form-control(multiple='')
+                        option Значение 1
+                        option Значение 2
+                        option Значение 3
+                        option Значение 4
+                        option Значение 5
+                        option Значение 6
+                        option Значение 7
+                        option Значение 8
+                        option Значение 9
+                        option Значение 10
+                        option Значение 11
+                        option Значение 12
+                        option Значение 13
+                        option Значение 14
+                        option Значение 15
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label(for='exampleSelect4') select:multiple:disabled
+                      select#exampleSelect4.form-control(multiple='', disabled='')
+                        option Значение 1
+                        option Значение 2
+                        option Значение 3
+                        option Значение 4
+                        option Значение 5
+                        option Значение 6
+                        option Значение 7
+                        option Значение 8
+                        option Значение 9
+                        option Значение 10
+                        option Значение 11
+                        option Значение 12
+                        option Значение 13
+                        option Значение 14
+                        option Значение 15
+                .row
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label
+                        input(type='checkbox', name='checkbox', checked='')
+                        span input[type="checkbox"]
+                      label
+                        input(type='checkbox', name='checkbox')
+                        span input[type="checkbox"]
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label
+                        input(type='checkbox', name='checkbox', disabled='')
+                        span input[type="checkbox"]:disabled
+                      label
+                        input(type='checkbox', name='checkbox', disabled='')
+                        span input[type="checkbox"]:disabled
+                .row
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label
+                        input(type='radio', name='radio', checked='')
+                        span input[type="radio"]
+                      label
+                        input(type='radio', name='radio')
+                        span input[type="radio"]
+                  .col-md-4.col-xs-12
+                    .form-group
+                      label
+                        input(type='radio', name='radio', disabled='')
+                        span input[type="radio"]:disabled
+                      label
+                        input(type='radio', name='radio', disabled='')
+                        span input[type="radio"]:disabled
+
+              h2 Оповещения
+              .alert.alert-success
+                strong Спасибо!
+                | Ваша заявка принята.
+              .alert.alert-info
+                strong Информация
+                | Сведения, независимо от формы их представления, воспринимаемые человеком или
+                | 		специальными устройствами как отражение фактов материального мира в процессе коммуникации.
+              .alert.alert-danger
+                strong Ошибка!
+                | Заполните все поля формы.
+              h2 Табы
+              div
+                ul.nav.nav-tabs(role='tablist')
+                  li.active(role='presentation')
+                    a(href='#home', aria-controls='home', role='tab', data-toggle='tab') Active Label
+                  li(role='presentation')
+                    a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Таб 2
+                  li(role='presentation')
+                    a(href='#messages', aria-controls='messages', role='tab', data-toggle='tab') Таб 3
+                // Tab panes
+                .tab-content
+                  #home.tab-pane.active(role='tabpanel')
+                    | Что они сказали Новосильцеву? Ничего. Они не поняли, они не могли понять самоотвержения нашего
+                    | императора, который ничего не хочет для себя и все хочет для блага мира. И что они обещали? Ничего. И
+                    | что обещали, и того не будет! Пруссия уже объявила, что Бонапарте непобедим и что вся Европа ничего не
+                    | может против него...
+                  #profile.tab-pane(role='tabpanel') Текст 2
+                  #messages.tab-pane(role='tabpanel') Текст 3
+              h2 Постраничная навигация
+              ul.pagination
+                li.prev.disabled
+                  a(href='#') «
+                li.visited
+                  a(href='#') 1
+                li.active
+                  a 2
+                li
+                  a(href='#') 3
+                li
+                  a(href='#') 4
+                li
+                  a(href='#') 5
+                li.next
+                  a(href='#') »
+              //
+                Различные размеры:
+                <ul class="pagination pagination-lg">...</ul> // большая
+                <ul class="pagination">...</ul> // средняя
+                <ul class="pagination pagination-sm">...</ul> // маленькая
+              h2 Обозначения
+              p
+                a.msg-badge(href='#')
+                  | Сообщения 
+                  span.badge 3
+              p
+                span.icon.icon-rar
+                span.icon.icon-jpg
+                span.icon.icon-pdf
+                span.icon.icon-txt
+                span.icon.icon-xls
+                span.icon.icon-zip
+                span.icon.icon-doc
+                span.icon.icon-mp4
+                span.icon.icon-mp3
+                span.icon.icon-ppt
+                span.icon.icon-gif
+              p
+                a.icon.icon-rar
+                a.icon.icon-jpg
+                a.icon.icon-pdf
+                a.icon.icon-txt
+                a.icon.icon-xls
+                a.icon.icon-zip
+                a.icon.icon-doc
+                a.icon.icon-mp4
+                a.icon.icon-mp3
+                a.icon.icon-ppt
+                a.icon.icon-gif
+              h2 Таблица
+              .table-responsive
+                table.table
+                  thead
+                    tr
+                      td №
+                      td Ф.И.О.
+                      td №
+                      td Ф.И.О.
+                  tbody
+                    tr
+                      td MMBH-130095576/3999
+                      td Фамилия Имя Отчество
+                      td MMBH-130095576/3999
+                      td Фамилия Имя Отчество
+                    tr
+                      td MMBH-130095576/3999
+                      td Фамилия Имя Отчество
+                      td MMBH-130095576/3999
+                      td Фамилия Имя Отчество
+                    tr
+                      td MMBH-130095576/3999
+                      td Фамилия Имя Отчество
+                      td MMBH-130095576/3999
+                      td Фамилия Имя Отчество
+              h2 Всплывающее окно
+              .modal-dialog.modal-sm
+                .modal-content
+                  .modal-header
+                    button.icon.icon-close.close(aria-label='Close', data-dismiss='modal', type='button')
+                    h2.modal-title Форма
+                  .modal-body
+                    form
+                      .form-group
+                        label(for='name') Имя
+                        input#name.form-control(type='text', placeholder='')
+                      .form-group
+                        label(for='phone') Номер телефона
+                        input#phone.form-control(type='text', placeholder='')
+                      .form-group
+                        label(for='email') Email
+                        input#email.form-control(type='text', placeholder='')
+                      .form-footer
+                        button.btn(type='button') Отправить
+              h2 Заглушки
+              .row
+                .col-md-3
+                  img(src='/local/templates/main/img/cap.png', alt='Заглушка для новости', title='Заглушка для новости')
+                .col-md-3
+                  img.photo(src='/local/templates/main/img/people-cap.png', alt='Заглушка для пользователя', title='Заглушка для пользователя')
+              h2 Реакция на наведение
+              a.gallery-item(href='#')
+                img.photo(src='/local/templates/main/img/gallery.png', alt='...')
+              h2 Аккордеон
+              #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                .panel
+                  #headingOne.panel-heading(role='tab')
+                    h4.panel-title
+                      a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                        | Каковы преимущества гибкой черепицы по сравнению
+                        | с другими кровельными материалами?
+                  #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                    .panel-body
+                      | Добрый день! Ответ на ваш вопрос получается слишком объемным, но я постараюсь выделить наиболее
+                      | существенные преимущества мягкой кровли.
+                      br
+                      | - во-первых, это стойкость к изменениям погоды –
+                      | 					выдерживает резкие скачки температур от -45 до +110 градусов, а в нашем южном регионе это наиболее
+                      | 					актуально.
+                .panel
+                  #headingTwo.panel-heading(role='tab')
+                    h4.panel-title
+                      a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                        | Каковы преимущества гибкой
+                        | черепицы по сравнению с другими кровельными материалами?
+                  #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                    .panel-body
+                      | Добрый день! Ответ на ваш вопрос получается слишком объемным, но я постараюсь выделить наиболее
+                      | существенные преимущества мягкой кровли.
+                      br
+                      | - во-первых, это стойкость к изменениям погоды –
+                      | 					выдерживает резкие скачки температур от -45 до +110 градусов, а в нашем южном регионе это наиболее
+                      | 					актуально.
+                .panel
+                  #headingThree.panel-heading(role='tab')
+                    h4.panel-title
+                      a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                        | Каковы преимущества
+                        | гибкой черепицы по сравнению с другими кровельными материалами?
+                  #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                    .panel-body
+                      | Добрый день! Ответ на ваш вопрос получается слишком объемным, но я постараюсь выделить наиболее
+                      | существенные преимущества мягкой кровли.
+                      br
+                      | - во-первых, это стойкость к изменениям погоды –
+                      | 					выдерживает резкие скачки температур от -45 до +110 градусов, а в нашем южном регионе это наиболее
+                      | 					актуально.
+      // footer
+      footer.visible-xs
+        .footer-content.no-print
+          .container
+            .row.copy
+              .col-xs-5 © DAICHI 2017
+              .col-xs-7
+                .individ
+                  a(href='//individ.ru', target='_blank', rel='nofollow') Создание сайта
+                  |  — 
+                  a(href='//individ.ru', target='_blank', rel='nofollow') Individ
+  #loading-indicator-template.hidden.no-print
+    style.
+      .bubblingG {
+      text-align: center;
+      width: 80px;
+      height: 50px;
+      }
+      .bubblingG span {
+      display: inline-block;
+      vertical-align: middle;
+      width: 10px;
+      height: 10px;
+      margin: 25px auto;
+      background: #000000;
+      -moz-border-radius: 50px;
+      -moz-animation: bubblingG 1.3s infinite alternate;
+      -webkit-border-radius: 50px;
+      -webkit-animation: bubblingG 1.3s infinite alternate;
+      -ms-border-radius: 50px;
+      -ms-animation: bubblingG 1.3s infinite alternate;
+      -o-border-radius: 50px;
+      -o-animation: bubblingG 1.3s infinite alternate;
+      border-radius: 50px;
+      animation: bubblingG 1.3s infinite alternate;
+      }
+      #bubblingG_1 {
+      -moz-animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+      -ms-animation-delay: 0s;
+      -o-animation-delay: 0s;
+      animation-delay: 0s;
+      }
+      #bubblingG_2 {
+      -moz-animation-delay: 0.39s;
+      -webkit-animation-delay: 0.39s;
+      -ms-animation-delay: 0.39s;
+      -o-animation-delay: 0.39s;
+      animation-delay: 0.39s;
+      }
+      #bubblingG_3 {
+      -moz-animation-delay: 0.78s;
+      -webkit-animation-delay: 0.78s;
+      -ms-animation-delay: 0.78s;
+      -o-animation-delay: 0.78s;
+      animation-delay: 0.78s;
+      }
+      @-moz-keyframes bubblingG {
+      0% {
+      width: 10px;
+      height: 10px;
+      background-color: #000000;
+      -moz-transform: translateY(0);
+      }
+      100% {
+      width: 24px;
+      height: 24px;
+      background-color: #FFFFFF;
+      -moz-transform: translateY(-21px);
+      }
+      }
+      @-webkit-keyframes bubblingG {
+      0% {
+      width: 10px;
+      height: 10px;
+      background-color: #000000;
+      -webkit-transform: translateY(0);
+      }
+      100% {
+      width: 24px;
+      height: 24px;
+      background-color: #FFFFFF;
+      -webkit-transform: translateY(-21px);
+      }
+      }
+      @-ms-keyframes bubblingG {
+      0% {
+      width: 10px;
+      height: 10px;
+      background-color: #000000;
+      -ms-transform: translateY(0);
+      }
+      100% {
+      width: 24px;
+      height: 24px;
+      background-color: #FFFFFF;
+      -ms-transform: translateY(-21px);
+      }
+      }
+      @-o-keyframes bubblingG {
+      0% {
+      width: 10px;
+      height: 10px;
+      background-color: #000000;
+      -o-transform: translateY(0);
+      }
+      100% {
+      width: 24px;
+      height: 24px;
+      background-color: #FFFFFF;
+      -o-transform: translateY(-21px);
+      }
+      }
+      @keyframes bubblingG {
+      0% {
+      width: 10px;
+      height: 10px;
+      background-color: #000000;
+      transform: translateY(0);
+      }
+      100% {
+      width: 24px;
+      height: 24px;
+      background-color: #FFFFFF;
+      transform: translateY(-21px);
+      }
+      }
+    .bubblingG
+      span#bubblingG_1
+      span#bubblingG_2
+      span#bubblingG_3
