@@ -52,6 +52,23 @@ a.link-dotted
   &:hover
     border-color: #0084ff
     color: $orange
+  &--with-ico
+    border: 0
+    .ico
+      margin-right: 5px
+    span
+      border-bottom: 1px dotted rgba(#0084ff, .5)
+      transition: all $transitionSpeed $ease
+    &:hover
+      span
+        border-color: #0084ff
+        color: $orange
+
+
+.blue-link
+  color: #0084ff
+  &:hover
+    color: $orange
 
 .form-group
   label

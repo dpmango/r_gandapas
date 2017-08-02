@@ -256,6 +256,8 @@
   margin-top: 30px
   .container
     padding-bottom: 0
+  .link-dotted
+    margin-left: 5px
   &__wrap
     background: white
     padding: 35px 35px 35px
@@ -408,38 +410,51 @@
   margin-right: -25px
   padding: 30px 25px
   margin-top: 30px
+  h2
+    margin-bottom: 10px
+  .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th
+    border-color: transparent
   table
     width: 100%
     max-width: 700px
     border-collapse: separate
     border-spacing: 0px 10px
     margin-bottom: 30px
-  td, tr
-    border: 0 !important
-    vertical-align: middle
-  thead
-    font-size: 25px
-    +Ubuntu(bold)
-  tbody
-    tr
-      margin-top: 10px
-      font-size: 15px
-      border-radius: 6px
-      background: white
-      border: 1px solid transparent
-      &:hover
-        border-color: $orange
-      &:last-child
-        font-size: 25px
-        +Ubuntu(bold)
-        background: transparent
-        border: 0
-        td:last-child
-          text-align: center
     td
-      padding: 5px 15px
-      &:last-child
-        width: 140px
+      vertical-align: middle
+    tr
+      border: 0
+    thead
+      font-size: 25px
+      +Ubuntu(bold)
+    tbody
+      tr
+        margin-top: 10px
+        font-size: 15px
+        border-radius: 6px
+        background: white
+        &:last-child
+          font-size: 25px
+          +Ubuntu(bold)
+          background: transparent
+          border: 0
+          td:last-child
+            text-align: center
+        &:hover
+          td
+            border-color: $orange
+      td
+        padding: 5px 15px
+        border-top: 1px solid transparent
+        border-bottom: 1px solid transparent
+        transition: all $transitionSpeed $ease
+        &:first-child
+          border-left: 1px solid transparent
+          border-radius: 10px 0 0 10px
+        &:last-child
+          border-right: 1px solid transparent
+          border-radius: 0 10px 10px 0
+          width: 140px
 
   &__name
     font-size: 25px
@@ -495,6 +510,12 @@
   &-plus
     right: 2px
 
+.p-training-schedule
+  margin-top: 10px
+  font-size: 15px
+  +Ubuntu(light)
+  b
+    +Ubuntu(medium)
 
 .p-training-bottom
   margin-top: 20px
