@@ -183,6 +183,25 @@
     color: $black
   +tablets
     flex-direction: column
+  &--hidden
+    display: none
+    &.active
+      display: flex
+
+.feedback__toggler
+  margin-top: 25px
+  color: #0084ff
+  cursor: pointer
+  margin-bottom: 30px
+  span
+    border-bottom: 1px dotted rgba(#0084ff, .5)
+    transition: all $transitionSpeed $ease
+    &:hover
+      border-color: #0084ff
+      color: $orange
+
+.feedback__back
+  margin-bottom: 30px
 
 .feedback__left
   width: 30%

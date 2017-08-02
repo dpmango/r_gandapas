@@ -418,4 +418,25 @@ $(document).on('ready', function(){
     }
   });
 
+  // FEEDBACK TOGGLER
+  var feedbackTogglerText
+  $('.feedback__toggler').on('click', function(){
+    var toggableObj = $(this).closest('.feedback__list').find('.feedback__item[data-toggable=1]')
+
+    if ( $(this).data('action') == 'expand' ){
+      toggableObj.addClass('active');
+      $(this).closest('.feedback__list').addClass('active');
+      feedbackTogglerText = $(this).text();
+      $(this).text( $(this).data('text') )
+      $(this).data('action', 'hide');
+
+    } else if ( $(this).data('action') == 'hide' ){
+      toggableObj.removeClass('active');
+      $(this).closest('.feedback__list').removeClass('active');
+      $(this).text( feedbackTogglerText )
+      $(this).data('action', 'expand');
+    }
+
+  });
+
 });
